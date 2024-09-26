@@ -1,0 +1,11 @@
+<!-- templates/products.html-->
+{% extends "base.html" %}
+{% block content %}
+
+ <h1>Company Products Page</h1>
+    <p>Our products may end with a serious case of d e d dead.</p>
+    <p>There are {{ products_list|length }} products in our inventory.</p>
+    <ul>
+            <li>{{ products_list }}</li>
+    </ul>
+{% endblock %}

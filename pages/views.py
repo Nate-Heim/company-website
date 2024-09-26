@@ -22,3 +22,18 @@ class AboutPageView(TemplateView):  # new
         context["contact_address"] = "1600 Pennsylvania Ave, Washington DC, DC 20500"
         context["phone_number"] = "202 208 1631"
         return context
+
+
+class ProductsPageView(TemplateView):  # new
+    template_name = "products.html"  # new
+
+    def get_context_data(self, **kwargs):  # new
+        context = super().get_context_data(**kwargs)
+        context["products_list"] = (
+            "Venomous Vortex",
+            "Shadowstrike Blade",
+            "Inferno Catalyst",
+            "Raptor’s Fury",
+        )
+
+        return context
